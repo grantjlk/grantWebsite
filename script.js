@@ -1,11 +1,21 @@
-// sidebar toggle logic
-const toggleButton = document.getElementById('toggleSidebar');
-const sidebar = document.getElementById('sidebar');
-const navLinks = document.getElementById('navLinks');
+// Fetch the sidebar file
+fetch('sidebar.html')
+  .then(res => res.text())        
+  .then(html => {
+    // insert sidebar html into the placeholder
+    document.getElementById('sidebar-placeholder').innerHTML = html;
 
-toggleButton.addEventListener('click', () => {
-  sidebar.classList.toggle('expanded');
-});
+    // sidebar toggle behavior after loaded
+    const toggleButton = document.getElementById('toggleSidebar');
+    const sidebar = document.getElementById('sidebar');
+    const navLinks = document.getElementById('navLinks');
+
+    toggleButton.addEventListener('click', () => {
+    sidebar.classList.toggle('expanded');
+    });
+  });
+
+
 
 // hover spotlight effect
 document.addEventListener('mousemove', (e) => {
