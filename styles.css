@@ -1,53 +1,132 @@
-/* Sidebar styling */
+/* MAIN CONTENT STUFF */
+.center-content {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    text-align: center;
+}
+
+/* title and nav box styles */
+.intro-title {
+    font-size: 4rem;
+    color: rgb(0, 0, 0);
+    border: 2px solid rgb(0, 0, 0);
+    padding: 0.4em 0.8em;
+    border-radius: 12px; 
+    background: none;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5); /* subtle shadow */
+}
+
+.button-row {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-box {
+    color: white;
+    font-size: 1.25rem;
+    padding: 1em 1.5em;
+    background-color: black;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    transition: transform 0.2s ease, background 0.3s;
+
+}
+
+.nav-box:hover {
+    background-color: #222;
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* BACKGROUND STUFF*/
+/* background image*/
+#background-collage {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: -2;
+}
+
+/* white overlay with circle cutout */
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background: radial-gradient(
+        circle 130px at var(--x, 50%) var(--y, 50%),
+        transparent 0%,
+        rgba(255, 255, 255, 0.7) 100%
+    );
+    /*transition: background 0.2s ease-out;*/
+    z-index: -1;
+}
+
+/* SIDEBAR STYLING */
 #sidebar {
-  position: fixed;
-  left: 0;
-  top: 0;
-  height: 100vh;
-  width: 60px;
-  background-color: rgba(0, 0, 0, 0.8);
-  transition: width 0.3s ease;
-  overflow: hidden;
-  z-index: 10;
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 60px;
+    background-color: rgba(0, 0, 0, 0.8);
+    transition: width 0.3s ease;
+    overflow: hidden;
+    z-index: 10;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
 }
 
 #sidebar.expanded {
-  width: 200px;
+     width: 200px;
 }
 
 #toggleSidebar {
-  background: none;
-  color: white;
-  border: none;
-  font-size: 1.5rem;
-  cursor: pointer;
-  margin: 10px;
-  transition: transform 0.3s ease;
+    background: none;
+    color: white;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin: 10px;
+    transition: transform 0.3s ease;
 }
 
 #toggleSidebar:hover {
-  opacity: 0.7;
+    opacity: 0.7;
 }
 
 #sidebar.expanded #toggleSidebar {
-  transform: rotate(180deg);
+     transform: rotate(180deg);
 }
 
 #navLinks {
-  display: flex;
-  flex-direction: column;
-  padding: 20px;
-  opacity: 0;
-  transition: opacity 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
 #navLinks a {
-  padding: 10px 0;
-  color: white;
-  text-decoration: none;
+    padding: 10px 0;
+    color: white;
+    text-decoration: none;
 }
 
 #sidebar.expanded #navLinks {
-  opacity: 1;
+    opacity: 1;
 }
+
