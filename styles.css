@@ -130,6 +130,26 @@
     opacity: 1;
 }
 
+#navLinks .sub-links {
+    margin-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    margin-bottom: 1rem;
+}
+
+#navLinks .sub-links a {
+    font-size: 0.9rem;
+    color: #ccc;
+    padding-left: 10px;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+#navLinks .sub-links a:hover {
+    color: white;
+}
+
 /* PERSONAL PAGE PART*/
 #personal-background {
     position: fixed;
