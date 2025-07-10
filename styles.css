@@ -1,4 +1,6 @@
-/* MAIN CONTENT STUFF */
+/*  ==================
+    HOME PAGE PART 
+=================== */
 .center-content {
     position: relative;
     min-height: 100vh;
@@ -18,7 +20,7 @@
     padding: 0.4em 0.8em;
     border-radius: 12px; 
     background: none;
-    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5); /* subtle shadow */
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5); 
 }
 
 .button-row {
@@ -45,8 +47,9 @@
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
 }
 
-/* BACKGROUND STUFF*/
-/* background image*/
+/*  ==================
+    BACKGROUND PART 
+=================== */
 #home-background {
     position: fixed;
     top: 0;
@@ -76,7 +79,9 @@
     z-index: -1;
 }
 
-/* SIDEBAR STYLING */
+/*  ==================
+    SIDEBAR STYLING  
+=================== */
 #sidebar {
     position: fixed;
     left: 0;
@@ -150,7 +155,9 @@
     color: white;
 }
 
-/* PERSONAL PAGE PART*/
+/*  ==================
+    PERSONAL PAGE PART 
+=================== */
 #personal-background {
     position: fixed;
     top: 0;
@@ -225,7 +232,9 @@
     text-shadow: 0 1px 2px rgba(255,255,255,0.7);
 }
 
-/* PROFFESIONAL PAGE PART*/
+/*  ==================
+    PROFESSIONAL PAGE PART 
+=================== */
 #professional-background {
     position: fixed;
     top: 0;
@@ -236,4 +245,39 @@
     background-size: cover;
     background-position: center;
     z-index: -2;
+}
+
+/*  ==================
+    MUSIC PAGE PART 
+=================== */
+#music-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/personal/music/music-background.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: -2;
+}
+
+.random-song-section {
+    margin-bottom: 2rem;
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    justify-content: center;
+}
+
+.song-header-row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.song-header {
+    font-size: 1.5rem;
+    margin: 0;
 }
