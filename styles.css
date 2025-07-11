@@ -44,7 +44,7 @@
 .nav-box:hover {
     background-color: #222;
     transform: scale(1.05);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 }
 
 /*  ==================
@@ -350,3 +350,12 @@
     color: #333;
 }
 
+.album-cover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.album-cover:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
