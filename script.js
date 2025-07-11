@@ -15,8 +15,6 @@ fetch('sidebar.html')
         });
     });
 
-
-
 // hover spotlight effect, if on homepage
 if (window.location.pathname.endsWith('index.html')){
     document.addEventListener('mousemove', (e) => {
@@ -26,3 +24,4 @@ if (window.location.pathname.endsWith('index.html')){
         document.documentElement.style.setProperty('--y', y);
     });
 }
+

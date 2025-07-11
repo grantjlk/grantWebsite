@@ -281,3 +281,72 @@
     font-size: 1.5rem;
     margin: 0;
 }
+
+/*  ==================
+    ALBUM LIST PART 
+=================== */
+#albums2024-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/personal/music/albums2024/albums2024-background.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: -2;
+}
+
+.album-entry {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+    align-items: flex-start;
+    max-width: 900px;
+    margin-inline: auto;
+    padding: 1rem;
+    border: 2px solid #000;
+    border-radius: 1rem;
+    background-color: rgba(255, 255, 255, 0.85);
+}
+
+.album-cover {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.album-info {
+    flex: 1;
+}
+
+.album-title {
+    font-size: 1.75rem;
+    margin-bottom: 0.3rem;
+}
+
+.fave-moment a {
+    color: #0066cc;
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+.about-heading {
+    margin-top: 1rem;
+    cursor: pointer;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.about-content {
+    margin-top: 0.5rem;
+    display: block;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #333;
+}
+
