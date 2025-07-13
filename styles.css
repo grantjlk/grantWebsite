@@ -315,43 +315,7 @@
     height: 150px;
     object-fit: cover;
     border-radius: 0.75rem;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-}
-
-.album-info {
-    flex: 1;
-}
-
-.album-title {
-    font-size: 1.75rem;
-    margin-bottom: 0.3rem;
-}
-
-.fave-moment a {
-    color: #0066cc;
-    text-decoration: underline;
-    font-weight: 500;
-}
-
-.about-heading {
-    margin-top: 1rem;
-    cursor: pointer;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.about-content {
-    margin-top: 0.5rem;
-    display: block;
-    font-size: 1rem;
-    line-height: 1.5;
-    color: #333;
-}
-
-.album-cover {
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
     transition: transform 0.2s ease, box-shadow 0.3s ease;
 }
 
@@ -359,3 +323,61 @@
     transform: scale(1.05); 
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 }
+
+.album-info {
+    flex: 1;
+    /*text-align: left;*/ /*If I want album stuff aligned to the left*/
+}
+
+.album-title {
+    font-size: 1.75rem;
+    margin-bottom: 0.7rem;
+}
+
+.top-songs {
+    margin-bottom: 0.7rem;
+}
+
+.song-link {
+    color: #000000;
+    text-decoration: underline;
+    text-decoration-color: rgba(0, 0, 0, 0.4);
+    text-underline-offset: 2px;
+    font-size: 0.9rem;
+    padding: 2px 4px;
+    border-radius: 3px;
+    transition: all 0.2s ease;
+}
+
+.song-link:hover {
+    background-color: rgba(0, 102, 204, 0.1);
+    color: #0066cc;
+    text-decoration-color: #0066cc;
+    transform: translateY(-1px);
+}
+
+.fave-moment a {
+    color: #000000;
+    text-decoration: underline;
+    text-decoration-color: rgba(0, 0, 0, 0.4);
+    text-underline-offset: 2px;
+    font-size: 0.9rem;
+    padding: 2px 4px;
+    border-radius: 3px;
+    transition: all 0.2s ease;
+}
+
+.fave-moment a:hover {
+    background-color: rgba(0, 102, 204, 0.1);
+    color: #0066cc;
+    text-decoration-color: #0066cc;
+    transform: translateY(-1px);
+}
+
+.about-content {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #333;
+}
+
