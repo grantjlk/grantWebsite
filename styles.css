@@ -439,3 +439,79 @@
     border-radius: 0.5rem;
     
 }
+
+/*  ==================
+   ABOUT ME PAGE
+=================== */
+
+#about-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/personal/about-me/about-background.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: -2;
+}
+
+
+.about-entry {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+    align-items: flex-start;
+    max-width: 900px;
+    margin-inline: auto;
+    padding: 1rem;
+    border: 2px solid #000;
+    border-radius: 1rem;
+    background-color: rgba(255, 255, 255, 0.85);
+}
+
+.about-image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+.about-info {
+    flex: 1;
+}
+
+.about-title {
+    font-size: 1.75rem;
+    margin-bottom: 0.7rem;
+}
+
+.about-details {
+    margin-bottom: 0.7rem;
+}
+
+.about-link {
+    color: #000000;
+    text-decoration: underline;
+    text-decoration-color: rgba(0, 0, 0, 0.4);
+    text-underline-offset: 2px;
+    font-size: 0.9rem;
+    padding: 2px 4px;
+    border-radius: 3px;
+    transition: all 0.2s ease;
+}
+
+.about-link:hover {
+    background-color: rgba(0, 102, 204, 0.1);
+    color: #0066cc;
+    text-decoration-color: #0066cc;
+    transform: translateY(-1px);
+}
+
+.about-content {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #333;
+}
