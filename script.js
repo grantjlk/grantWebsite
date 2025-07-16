@@ -25,3 +25,13 @@ if (window.location.pathname.endsWith('index.html')){
     });
 }
 
+//load random song for music page
+async function loadRandomSong() {
+  const res = await fetch('http://localhost:8888/api/random-track');
+  const { embedUrl } = await res.json();
+
+  const iframe = document.querySelector('.song-header-row iframe');
+  iframe.src = embedUrl;
+}
+
+loadRandomSong();
