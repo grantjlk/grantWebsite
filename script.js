@@ -26,12 +26,44 @@ if (window.location.pathname.endsWith('index.html')){
 }
 
 //load random song for music page
-async function loadRandomSong() {
-  const res = await fetch('http://localhost:8888/api/random-track');
-  const { embedUrl } = await res.json();
+// Music page functionality
+if (window.location.pathname.endsWith('music.html')) {
+    // Load random song function
+    async function loadRandomSong() {
+        try {
+            const res = await fetch('http://localhost:8888/api/random-track');
+            const { embedUrl } = await res.json();
+            const iframe = document.querySelector('.song-header-row iframe');
+            iframe.src = embedUrl;
+        } catch (error) {
+            console.error('Error loading random song:', error);
+        }
+    }
 
-  const iframe = document.querySelector('.song-header-row iframe');
-  iframe.src = embedUrl;
+    // Load initial random song
+    loadRandomSong();
+
+    // Add reload button functionality
+    document.addEventListener('DOMContentLoaded', () => {
+        const reloadBtn = document.querySelector('.reload-btn');
+        if (reloadBtn) {
+            reloadBtn.addEventListener('click', async () => {
+                // Disable button during loading
+                reloadBtn.disabled = true;
+                reloadBtn.textContent = '🔄 Loading...';
+                
+                try {
+                    await loadRandomSong();
+                } catch (error) {
+                    console.error('Error reloading song:', error);
+                }
+                
+                // Re-enable button
+                reloadBtn.disabled = false;
+                reloadBtn.textContent = '🔄 Reload Song';
+            });
+        }
+    });
 }
 
 loadRandomSong();
