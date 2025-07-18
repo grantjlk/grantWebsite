@@ -71,7 +71,7 @@ app.use(cors());
 let cachedToken = null;
 let tokenExpiry = 0;
 
-// Track caching (important for 2000 tracks!)
+// Track caching (for playlists with more than 100 tracks)
 let cachedTracks = null;
 let tracksExpiry = 0;
 

@@ -262,6 +262,39 @@
     z-index: -2;
 }
 
+.song-text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.reload-btn-container {
+    margin-top: 0.5rem;
+}
+
+.reload-btn {
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 0.7em 1.2em;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    transition: transform 0.2s ease, background 0.3s, box-shadow 0.3s;
+}
+
+.reload-btn:hover {
+    background-color: #222;
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.reload-btn:active {
+    transform: scale(0.98);
+}
+
 .random-song-section {
     margin-bottom: 2rem;
     width: 100%;
@@ -278,7 +311,7 @@
 }
 
 .song-header {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     margin: 0;
 }
 
