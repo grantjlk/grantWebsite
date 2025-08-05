@@ -570,3 +570,20 @@
     line-height: 1.5;
     color: #333;
 }
+
+/*  ==================
+   COOL PHOTOS PAGE
+=================== */
+.column-collage {
+    column-count: 4;
+    column-gap: 16px;
+    padding: 16px;
+}
+
+.column-collage img {
+    width: 100%;
+    margin-bottom: 16px;
+    display: block;
+    border-radius: 5px;
+    outline: 2px solid rgba(0, 0, 0, 1);
+}
